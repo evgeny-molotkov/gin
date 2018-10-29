@@ -1,0 +1,78 @@
+<app-header></app-header>
+
+<app-menu [currentMenuLink]=currentMenuLink></app-menu>
+
+<main class="main text">
+    <div class="gallery">
+        <div *ngFor="let image of images" class="gallery__item">
+            <img src="{{image.path}}" alt="tattoo" class="gallery__img" (click)="openDetailImg(image.path)">
+        </div>
+    </div>
+</main>
+
+<div class="image-detail" [class.image-detail_show]="isShowDetail">
+    <div class="image-detail__overlay"></div>
+
+    <div class="image-detail__icons-block">
+        <button (click)="rotateRight()" 
+                class="image-detail__icon" 
+                title="Повернуть вид по часовой стрелке">
+            <img src="../../assets/icons/rotate_right.svg" alt="icon">
+        </button>
+
+        <button (click)="rotateLeft()" 
+                class="image-detail__icon" 
+                title="Повернуть вид против часовой стрелки">
+            <img src="../../assets/icons/rotate_left.svg" alt="icon">
+        </button>
+        
+        <button (click)="plusCircle()" 
+                class="image-detail__icon" 
+                title="Увеличить">
+            <img src="../../assets/icons/add.svg" alt="icon">
+        </button>
+
+        <button (click)="minusCircle()" 
+                class="image-detail__icon" 
+                title="Уменьшить">
+            <img src="../../assets/icons/remove.svg" alt="icon">
+        </button>
+        
+        <button *ngIf="getFullContentButtonCondition()" 
+                (click)="fullContent()" 
+                class="image-detail__icon" 
+                title="Подогнать страницу по размерам окна">
+            <img src="../../assets/icons/fullscreen.svg" alt="icon">
+        </button>
+
+        <button *ngIf="!getFullContentButtonCondition()" 
+                (click)="originSize()" 
+                class="image-detail__icon" 
+                title="Оригинальный размер">
+            <img src="../../assets/icons/fullscreen_exit.svg" alt="icon">
+        </button>
+
+        <button (click)="close()" 
+                class="image-detail__icon image-detail__icon_close" 
+                title="Закрыть">
+            <img src="../../assets/icons/close.svg" alt="icon">
+        </button>
+    </div>
+
+    <div class="image-detail__image-wrapper">
+        <div class="image-detail__image-container"
+             (mousedown)="onMouseDown($event)"
+             (mousemove)="onMouseMove($event)"
+             (mouseup)="onMouseUp()">
+
+            <img #image class="image-detail__image" [class.image-detail__image_origin-size]="isOriginSize"
+                [src]="src ? src : '#'"
+                (click)="$event.stopPropagation()"
+                [ngStyle]="{'transform':'rotate('+angle+'deg) scale('+scale+') translate3d('+deltaX+'px, '+deltaY+'px, 0px)'}"
+                [style.transform-origin]="transformOriginX+' '+transformOriginY"
+                />
+
+            <div class="image-detail__image-overlay-grab"></div>
+        </div>
+    </div>
+</div>
