@@ -1,5 +1,7 @@
 ## Simple angular application by Evgeny Molotkov
 
+Now photo gallery supports zoom in, zoom out by mousewheel.
+
 ## GinApp
 
 This project was initially generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
