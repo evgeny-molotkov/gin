@@ -8,16 +8,16 @@ import { GuestRoomComponent } from './guest-room/guest-room.component';
 import { ContactsComponent } from './contacts/contacts.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
-  { path: 'welcome', component: WelcomePageComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'gallery', component: GalleryComponent },
-  { path: 'guest-room', component: GuestRoomComponent },
-  { path: 'contacts', component: ContactsComponent },
+    { path: '', redirectTo: '/welcome', pathMatch: 'full' },
+    { path: 'welcome', component: WelcomePageComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'gallery', component: GalleryComponent },
+    { path: 'guest-room', component: GuestRoomComponent },
+    { path: 'contacts', component: ContactsComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }

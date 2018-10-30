@@ -12,21 +12,21 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WelcomePageComponent,
-    AboutComponent,
-    MenuComponent,
-    GalleryComponent,
-    GuestRoomComponent,
-    ContactsComponent,
-    HeaderComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        WelcomePageComponent,
+        AboutComponent,
+        MenuComponent,
+        GalleryComponent,
+        GuestRoomComponent,
+        ContactsComponent,
+        HeaderComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

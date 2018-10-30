@@ -9,15 +9,15 @@ import { menuType } from '../models';
 })
 export class MenuComponent implements OnInit {
 
-  @Input() currentMenuLink: menuType;
+    @Input() currentMenuLink: menuType;
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-  isCurrentLink(link: menuType) {
-    return link === this.currentMenuLink;
-  }
+    isCurrentLink(link: menuType) {
+        return link === this.currentMenuLink;
+    }
 
 }

@@ -9,11 +9,11 @@ import { menuType } from '../models';
 })
 export class ContactsComponent implements OnInit {
 
-  currentMenuLink: menuType = menuType.Contacts;
+    currentMenuLink: menuType = menuType.Contacts;
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

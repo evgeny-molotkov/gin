@@ -9,11 +9,11 @@ import { menuType } from '../models';
 })
 export class GuestRoomComponent implements OnInit {
 
-  currentMenuLink: menuType = menuType.GuestRoom;
+    currentMenuLink: menuType = menuType.GuestRoom;
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
