@@ -1,24 +1,9 @@
 <aside class="aside">
     <ul class="aside__menu menu">
-        <li class="menu__item">
+        <li *ngFor="let menuItem of menuItems" class="menu__item">
             <a class="menu__link link" 
-               routerLink="/about"
-               [class.menu__link_active]="isCurrentLink('About')">О нас</a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link link" 
-               routerLink="/gallery"
-               [class.menu__link_active]="isCurrentLink('Gallery')">Галерея</a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link link" 
-               routerLink="/guest-room"
-               [class.menu__link_active]="isCurrentLink('GuestRoom')">Гостевая</a>
-        </li>
-        <li class="menu__item">
-            <a class="menu__link link" 
-               routerLink="/contacts"
-               [class.menu__link_active]="isCurrentLink('Contacts')">Контакты</a>
+               routerLink="{{menuItem.link}}"
+               [class.menu__link_active]="isCurrentLink(menuItem.name)">{{menuItem.text}}</a>
         </li>
     </ul>
 </aside>

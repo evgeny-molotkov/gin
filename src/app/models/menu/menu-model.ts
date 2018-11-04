@@ -9,3 +9,9 @@ export const menuType = {
     GuestRoom: 'GuestRoom' as menuType,
     Contacts:  'Contacts'  as menuType
 };
+
+export class MenuItem {
+    public name: menuType;
+    public link: string;
+    public text: string;
+}
